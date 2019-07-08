@@ -44,6 +44,14 @@ export const getSportsData = functions.https.onRequest((req, res,) => {
         //  console.log(snapshot.val());
         // return res.status(200).send(snapshot.val());
 
+
+
+        /*
+         Summery Cloud Function 
+        */
+
+
+
         // Save Sports Details into Firebase FireStore Database.
         admin.firestore().doc('sports/NBA').set(snapshot.val())
         .then(function() {
